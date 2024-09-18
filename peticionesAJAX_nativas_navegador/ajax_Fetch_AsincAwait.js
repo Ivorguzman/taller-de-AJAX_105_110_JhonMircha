@@ -1,6 +1,5 @@
 /*
-
- hay una confusión entre la función replacer que creaste para JSON.stringify y el método replace de JavaScript. Vamos a aclarar ambos conceptos:
+ Confusión entre la función replacer que creaste para JSON.stringify y el método replace de JavaScript. Vamos a aclarar ambos conceptos:
 Función replacer en JSON.stringifyLa función replacer que has creado es una función personalizada que se pasa como segundo argumento a JSON.stringify. Esta función se utiliza para filtrar o modificar los valores antes de que se conviertan en una cadena JSON. En tu caso, la función excluye la propiedad "contraseña".
 Método replace en JavaScriptEl método replace es un método nativo de JavaScript que se utiliza para reemplazar partes de una cadena de texto. Aquí tienes un ejemplo básico de cómo usarlo:
 
@@ -59,12 +58,8 @@ JSON
 	"edad": 30,
 	"ciudad": "Caracas"
 }
-Código generado por IA. Revisar y usar cuidadosamente. Más información sobre preguntas frecuentes.
-Como puedes ver, la propiedad "contraseña" ha sido excluida del resultado JSON.
-
-
-*/
-
+ la propiedad "contraseña" ha sido excluida del resultado JSON.
+*/ 
 
 
 
@@ -82,11 +77,12 @@ Como puedes ver, la propiedad "contraseña" ha sido excluida del resultado JSON.
 
 			//  Abrimos la solicitud GET en el archivo local 
 			// Se utilizo la declaracion var  y no let ,para que sea visibel en el catch()
-			var $response = await fetch("/assets/user.json");
+			var $response = await fetch("/assets/users.json");
 			let $json = await $response.json();
 			console.log("$response =", $response);
 			console.log("$json =", $json);
 			// Para ver el contenido del JSON de forma legible
+
 			console.log("Contenido del JSON:", JSON.stringify($json, null, 2));
 
 			$json.forEach((element) => {
@@ -111,6 +107,7 @@ Como puedes ver, la propiedad "contraseña" ha sido excluida del resultado JSON.
 			let statusMensaje = $response.status;
 			let textMensaje = $response.statusText;
 			$fecthAsync.innerHTML = ` ERROR: ${statusMensaje} ${textMensaje}`;
+
 			throw {
 				status: statusMensaje, statusText: textMensaje
 			}
