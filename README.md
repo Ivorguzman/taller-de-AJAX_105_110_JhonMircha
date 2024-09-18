@@ -1,4 +1,4 @@
-# Taller de AJAX con Tecnologías Nativas del Navegador
+# Taller de AJAX con Tecnologías Nativas del Navegador y la libreria Axios
 
 Este repositorio contiene el material del taller dictado por el Ing. Jhon Mircha de la ciudad de  México, donde se exploran diferentes métodos para realizar peticiones AJAX utilizando tecnologías nativas del navegador y Node.js.
 
