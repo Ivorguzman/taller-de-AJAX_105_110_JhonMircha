@@ -11,9 +11,9 @@
   const objXhr = new XMLHttpRequest();
 
   // Abrimos la solicitud GET y establecemos la URL
-  // xhr.open("GET", "https://jsonplaceholder.typicode.com/users");
+  objXhr.open("GET", "https://jsonplaceholder.typicode.com/users");
   //  Abrimos la solicitud GET en el archivo local 
-  objXhr.open("GET", "/assets/users.json");
+  //objXhr.open("GET", "/assets/users.json");
 
   // Agregamos un evento de escucha para el estado de la solicitud
   objXhr.addEventListener("readystatechange", (e) => {

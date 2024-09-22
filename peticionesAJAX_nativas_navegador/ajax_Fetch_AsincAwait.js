@@ -73,11 +73,11 @@ JSON
 		try {
 			console.log("Dentro del Try");
 			// Abrimos la solicitud GET y establecemos la URL
-			//let $response = await fetch("https://jsonplaceholder.typicode.com/users");
+			var $response = await fetch("https://jsonplaceholder.typicode.com/user");
 
 			//  Abrimos la solicitud GET en el archivo local 
 			// Se utilizo la declaracion var  y no let ,para que sea visibel en el catch()
-			var $response = await fetch("/assets/users.json");
+		//	var $response = await fetch("/assets/users.json");
 			let $json = await $response.json();
 			console.log("$response =", $response);
 			console.log("$json =", $json);
