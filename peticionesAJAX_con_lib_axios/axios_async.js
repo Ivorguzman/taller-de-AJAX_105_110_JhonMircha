@@ -4,7 +4,7 @@ import jsdom from 'jsdom';
 const { window } = new jsdom.JSDOM();
 const document = window.document;
 (() => {
-	
+
 	//? Obtener el elemento del DOM
 	const $axios = document.getElementById("axios_async");
 	//const $axios = document.getElementById("axios_async");
@@ -16,8 +16,8 @@ const document = window.document;
 	axios
 		.get("https://jsonplaceholder.typicode.com/users")
 		//.get("/assets/users.json")
-			.then((response) => {
-				console.log(response);
+		.then((response) => {
+			console.log(response);
 			// Manejar la respuesta exitosa
 			console.log(response.data);
 		})
@@ -36,7 +36,7 @@ const document = window.document;
 		.finally(() => {
 			// Código que se ejecuta independientemente del resultado
 			console.log("Solicitud finalizada");
-			
+
 		});
 })();
 
